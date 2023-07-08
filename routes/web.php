@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\TravelPackageController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Middleware\IsAdmin;
 use App\Models\TravelPackage;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,7 @@ Route::prefix('admin')
     ->group(function(){
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('travel-package', TravelPackageController::class);
+        Route::resource('gallery', GalleryController::class);
     });
 
 Auth::routes(['verify' => true]);
