@@ -5,7 +5,7 @@ use App\Http\Controllers\Admin\TravelPackageController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\GalleryController;   
 use App\Http\Middleware\IsAdmin;
 use App\Models\TravelPackage;
 use Illuminate\Support\Facades\Route;
