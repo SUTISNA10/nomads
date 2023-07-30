@@ -24,8 +24,11 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/detail', [DetailController::class, 'index'])->name('detail');
+
+Route::get('/detail/{slug}', [DetailController::class, 'index'])->name('detail');
+
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+
 Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout-success');
 
 Route::prefix('admin')
